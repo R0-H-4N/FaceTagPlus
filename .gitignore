@@ -1,0 +1,169 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+.jupyter/
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+*.env
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.pnpm-debug.log*
+
+# Build outputs
+dist/
+build/
+*.log
+
+# React/Vite
+fullstack/frontend/dist/
+fullstack/frontend/build/
+.vite/
+
+# Uploaded Files
+fullstack/backend/uploads/photos/*
+fullstack/backend/uploads/profiles/*
+!fullstack/backend/uploads/photos/.gitkeep
+!fullstack/backend/uploads/profiles/.gitkeep
+
+# ML Models and Datasets
+models/embeddings/finetuned_models/*
+models/embeddings/models_places365/*
+models/embeddings/mongo_query_t5/*
+!models/embeddings/finetuned_models/.gitkeep
+!models/embeddings/models_places365/.gitkeep
+!models/embeddings/mongo_query_t5/config.json
+
+# Datasets
+datasets/
+scene-classification/data/*
+!scene-classification/data/.gitkeep
+*.tar
+*.tar.gz
+*.zip
+
+# Model weights and checkpoints
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.bin
+*.h5
+*.pb
+*.onnx
+*.tflite
+
+# Large files
+*.pkl
+*.pickle
+
+# Media files
+*.mp4
+*.avi
+*.mov
+*.wmv
+
+# Test images
+test_images/
+temp/
+tmp/
+
+# Evaluation outputs
+experiments/evaluation/*/images_output/
+experiments/evaluation/*/output/
+
+# Cache
+.cache/
+*.cache
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.hypothesis/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# Logs
+logs/
+*.log
+
+# MongoDB
+mongodb/
+mongo-data/
+
+# CUDA
+*.cuda
+*.cudnn
