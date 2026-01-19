@@ -10,6 +10,8 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.119-009688.svg)](https://fastapi.tiangolo.com/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248.svg)](https://www.mongodb.com/)
 
+**[🎥 Watch Demo Video](https://drive.google.com/file/d/1186-vPbJ2yik3NxHMDpq3t8_jd3BCejj/view)**
+
 </div>
 
 ---
