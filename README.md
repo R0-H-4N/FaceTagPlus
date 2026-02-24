@@ -192,6 +192,35 @@
 
 ## 📦 Installation
 
+### Quick Start with Docker (Recommended)
+
+The easiest way to run FaceTag is using Docker:
+
+1. **Prerequisites**: Docker and Docker Compose installed
+2. **Clone repository**: 
+   ```bash
+   git clone <repository-url>
+   cd FaceTag-Automated-Photo-Tagging-AP
+   ```
+3. **Setup environment**:
+   ```bash
+   cp .env.example .env
+   # Edit .env with your credentials (see DOCKER_SETUP.md)
+   ./check-env.sh  # Validate your configuration
+   ```
+4. **Run**:
+   ```bash
+   docker-compose up --build
+   ```
+
+**📖 See [DOCKER_SETUP.md](DOCKER_SETUP.md) for detailed Docker setup instructions**
+
+---
+
+### Manual Installation
+
+For development or custom setups, you can install manually:
+
 ### Prerequisites
 
 - **Python**: 3.8 or higher

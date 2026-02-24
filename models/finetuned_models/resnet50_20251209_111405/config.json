@@ -1,0 +1,46 @@
+{
+  "model_name": "resnet50",
+  "batch_size": 32,
+  "num_epochs": 30,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0005,
+  "dropout_rate": 0.5,
+  "save_dir": "./finetuned_models",
+  "data_dir": "./train",
+  "device": "cuda",
+  "gradual_unfreeze": true,
+  "unfreeze_schedule": [
+    [
+      1,
+      "classifier",
+      1.0
+    ],
+    [
+      4,
+      "layer4",
+      0.1
+    ],
+    [
+      7,
+      "layer3",
+      0.05
+    ],
+    [
+      10,
+      "layer2",
+      0.01
+    ],
+    [
+      13,
+      "all",
+      0.005
+    ]
+  ],
+  "overfit_early_stop": true,
+  "overfit_threshold": 10.0,
+  "overfit_val_acc_threshold": 80.0,
+  "overfit_patience": 3,
+  "early_stopping": true,
+  "early_stopping_patience": 7,
+  "early_stopping_min_delta": 0.001
+}

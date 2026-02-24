@@ -54,7 +54,7 @@ const Dashboard = () => {
             {user?.profilePicture && (
               <div className="profile-picture">
                 <img 
-                  src={`http://localhost:3000${user.profilePicture}`} 
+                  src={`${import.meta.env.VITE_BASE_URL || 'http://localhost:3000'}${user.profilePicture}`} 
                   alt={user.name}
                 />
               </div>

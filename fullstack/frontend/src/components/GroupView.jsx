@@ -138,7 +138,7 @@ const GroupView = () => {
         {user?.profilePicture && (
           <div className="user-profile-pic">
             <img 
-              src={`http://localhost:3000${user.profilePicture}`} 
+              src={`${import.meta.env.VITE_BASE_URL || 'http://localhost:3000'}${user.profilePicture}`} 
               alt={user.name}
               title={user.name}
             />

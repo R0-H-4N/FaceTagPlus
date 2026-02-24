@@ -41,7 +41,6 @@ mongoose.connect(url)
     console.log('✅ Successfully connected to MongoDB');
   })
   .catch((err) => {
-    console.error('password:', db_user_pass);
     console.error('❌ Error connecting to MongoDB:', err.message);
   });
 

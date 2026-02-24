@@ -1,0 +1,65 @@
+version: '3.8'
+
+# IMPORTANT: Create a .env file in this directory with required variables:
+# - DB_USER
+# - DB_USER_PASS  
+# - JWT_SECRET (min 32 chars)
+# See .env.example for template and DOCKER_SETUP.md for full instructions
+
+services:
+  # FastAPI ML Model Service
+  model:
+    build:
+      context: ./models
+      dockerfile: Dockerfile
+    container_name: facetag-model
+    ports:
+      - "8000:8000"
+    networks:
+      - facetag-network
+    restart: unless-stopped
+
+  # Backend API Service
+  backend:
+    build:
+      context: ./fullstack/backend
+      dockerfile: Dockerfile
+    container_name: facetag-backend
+    ports:
+      - "3000:3000"
+    environment:
+      - DB_USER=${DB_USER:?DB_USER is required}
+      - DB_USER_PASS=${DB_USER_PASS:?DB_USER_PASS is required}
+      - JWT_SECRET=${JWT_SECRET:?JWT_SECRET is required}
+      - PORT=3000
+      - FASTAPI_URL=http://model:8000
+      - NODE_ENV=${NODE_ENV:-production}
+    volumes:
+      - backend-uploads:/app/uploads
+    depends_on:
+      - model
+    networks:
+      - facetag-network
+    restart: unless-stopped
+
+  # Frontend Service
+  frontend:
+    build:
+      context: ./fullstack/frontend
+      dockerfile: Dockerfile
+    container_name: facetag-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - facetag-network
+    restart: unless-stopped
+
+networks:
+  facetag-network:
+    driver: bridge
+
+volumes:
+  backend-uploads:
+    driver: local

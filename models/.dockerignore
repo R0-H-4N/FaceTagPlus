@@ -1,0 +1,81 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose*.yml
+
+# Documentation
+README.md
+*.md
+
+# Unused finetuned models (only keeping resnet50_20251209_111405)
+finetuned_models/resnet50_20251209_111004/
+
+# Unused checkpoint files (only keeping best_loss_model_1.pth)
+finetuned_models/resnet50_20251209_111405/best_loss_model_2.pth
+finetuned_models/resnet50_20251209_111405/best_loss_model_3.pth
+finetuned_models/resnet50_20251209_111405/best_loss_model_4.pth
+finetuned_models/resnet50_20251209_111405/best_loss_model_5.pth
+finetuned_models/resnet50_20251209_111405/best_loss_model_6.pth
+finetuned_models/resnet50_20251209_111405/best_loss_model_7.pth
+finetuned_models/resnet50_20251209_111405/best_loss_model_8.pth
+finetuned_models/resnet50_20251209_111405/best_loss_model_9.pth
+finetuned_models/resnet50_20251209_111405/best_loss_model_10.pth
+finetuned_models/resnet50_20251209_111405/best_loss_model_11.pth
+finetuned_models/resnet50_20251209_111405/best_loss_model_12.pth
+finetuned_models/resnet50_20251209_111405/best_loss_model_13.pth
+finetuned_models/resnet50_20251209_111405/best_loss_model_14.pth
+finetuned_models/resnet50_20251209_111405/best_loss_model_15.pth
+finetuned_models/resnet50_20251209_111405/best_loss_model_{epoch}.pth
+finetuned_models/resnet50_20251209_111405/best_model.pth
+finetuned_models/resnet50_20251209_111405/final_model.pth
+finetuned_models/resnet50_20251209_111405/checkpoint_epoch_*.pth
+
+# Unused pretrained models (only keeping resnet50_places365.pth.tar)
+models_places365/densenet161_places365.pth.tar
+models_places365/resnet18_places365.pth.tar
+
+# CLIP-based scene recognition (not used since model_to_use_is_clip = False)
+scene_recognition.py
+
+# Test and evaluation files
+test_*.py
+*_test.py
+
+# Temporary files
+*.tmp
+*.log
+*.bak
+.DS_Store
+Thumbs.db
+
+# Downloaded models (will be downloaded at runtime if needed)
+mongo_query_t5/
+
+# CSV files (if not needed)
+scenes.csv

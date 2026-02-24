@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './PhotoGallery.css';
 
-const API_BASE_URL = 'http://localhost:3000';
+const API_BASE_URL = import.meta.env.VITE_BASE_URL || 'http://localhost:3000';
 
 const PhotoGallery = ({ photos, onDownload }) => {
   const [selectedPhoto, setSelectedPhoto] = useState(null);
